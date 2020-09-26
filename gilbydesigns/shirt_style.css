@@ -1,0 +1,160 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face{
+	src:url("fonts/Gilby-Regular.ttf");
+	font-family: gilbyfont;
+}
+
+header{
+	width: 100%;
+	top: 0;
+	height: 8em;
+	padding: .5em;
+	position: fixed;
+	z-index: 1;
+	background-image: url("images/header_background.PNG");
+	background-size: 100% 100%;
+	background-clip: border-box;
+	background-repeat: no-repeat;
+}
+.logo{
+	position: relative;
+	display: block;
+	float: left;
+	width: 6em;
+	bottom: .2em;
+}
+.logo img{
+	width: 4em;
+}
+.site-nav{
+	position: relative;
+	float:right;
+	z-index: 400;
+	top: 0;
+	left: 0;
+	display: block !important;
+	width: 75%;
+	padding: .65em 3em 0 0;
+	opacity: .95;
+	background: none;
+}
+.site-nav ul{
+	list-style-type: none;
+	margin: 0;
+	text-align: right;
+}
+.site-nav ul li{
+	display: inline-block;
+	margin-bottom: 0;
+	margin-left: 1.5em;
+	transition: transform 1s;
+}
+.site-nav ul li:hover{
+	transform: scale(1.2);
+}
+.site-nav ul li a{
+	font-family: gilbyfont;
+	font-weight: 100;
+	font-size: 2em;
+	padding-bottom: .5em;
+	text-decoration: none;
+	letter-spacing: .17em;
+	text-transform: uppercase;
+	color: #fff;
+	transition: transform 2s;
+}
+.site-nav ul li:hover a{
+	transform: scale(1.2);
+}
+body{
+	background-image: url("images/home.PNG");
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0;
+	padding-top: 5em;/* Change color */
+	font-family: sans-serif;
+	align-content: center;
+}
+
+.home_table{
+	width: 20em; /* Change to em */
+	align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container{
+	width: 20em; /* Change to em */
+	
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.container .box{
+	position:relative;
+	width: 30em;
+	height: 30em;
+	margin: 1em;
+	box-sizing: border-box;
+	display: inline-block;
+}
+
+.container .box .imgBox{
+	position: relative;
+	overflow: hidden;
+}
+
+.container .box .imgBox img{
+	max-width: 100%;
+	transition: transform 2s;
+}
+
+.container .box:hover .imgBox img{
+	transform: scale(1.2);
+}
+
+.container .box .details{
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	bottom: 1em;
+	right: 1em;
+	background: rgba(0,0,0,.8);
+	transform: scaleY(0);
+	transition: transform .5s;
+	border-radius: 1em;
+}
+
+.container .box:hover .details{
+	transform: scaleY(1);
+}
+
+.container .box .details .content{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	padding: 15px;
+	color: #fff;
+}
+
+.container .box .details .content h2{
+	margin: 0;
+	padding: 0;
+	font-size: 7em;
+	font-family: gilbyfont;
+}
+
+.container .box .details .content p{
+	margin: 0;
+	padding: 0;
+	font-size: 5em;
+	font-family: gilbyfont;
+}
