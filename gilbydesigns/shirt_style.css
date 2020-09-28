@@ -68,7 +68,7 @@ header{
 	transform: scale(1.2);
 }
 body{
-	background-image: url("images/home.PNG");
+	background-image: url("images/home.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin: 0;
