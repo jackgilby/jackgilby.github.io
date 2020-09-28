@@ -47,7 +47,10 @@ header{
 .site-nav ul li{
 	display: inline-block;
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1.5em;	transition: transform 1s;
+}
+.site-nav ul li:hover{
+	transform: scale(1.2);
 }
 .site-nav ul li a{
 	font-family: gilbyfont;

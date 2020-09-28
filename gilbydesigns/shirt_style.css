@@ -75,6 +75,9 @@ body{
 	padding-top: 5em;/* Change color */
 	font-family: sans-serif;
 	align-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .home_table{
