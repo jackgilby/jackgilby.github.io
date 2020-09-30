@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Snow</title>
+<link rel="stylesheet" href="bubblestyle.css">
+</head>
+<header>
+		<!-- Put a logo?-->
+		<a class="logo">
+			<img class="logo" src="images/gilbylogo.png">
+		</a>
+		
+		<!-- Navigation-->
+		<nav class="site-nav">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="shirts.html">Shirts</a></li>
+				<li><a href="social.html">Social</a></li>
+				<li><a href="about.html">About</a></li>
+			</ul>
+		</nav>
+		
+	</header>
+<body>
+	<section></section>
+	<script>
+		
+		const colors = [
+			'#abc5fe',
+			'#bed2fe',
+			'#d1dfff',
+			'#e3ecff'
+		]
+		
+		function createSquare(){
+			const section = document.querySelector('section');
+			const square = document.createElement('span');
+			
+			var size = Math.random() * 10;
+			
+			square.style.width = 5 + size +'px';
+			square.style.height = 5 + size +'px';
+			
+			square.style.top = Math.random() * innerHeight + 'px'; 
+			square.style.left = Math.random() * innerWidth + 'px';
+			
+			const bg = colors[Math.floor(Math.random() * colors.length)];
+			square.style.background = bg;
+			
+			section.appendChild(square);
+			
+			setTimeout(()=>{
+				square.remove()
+			},5000)
+		}
+		
+		setInterval(createSquare,150)
+	</script>
+</body>
+</html>
