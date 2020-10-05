@@ -116,7 +116,7 @@ body{
 }
 
 .container .box .imgBox img{
-	max-width: 100%;
+	max-width: 30em;
 	transition: transform 2s;
 }
 
