@@ -76,7 +76,7 @@ body{
 
 span{
 	position: absolute;
-	background: url("images/about_icon.png");
+	background: url("images/raindrop.png");
 	background-size: cover;
 	pointer-events: none;
 	transform: translate(-50%,-50%);
@@ -88,7 +88,7 @@ span{
 		opacity: 1;
 	}
 	100%{
-		transform: translate(-50%,-1000%);
+		transform: translate(50%,1000%);
 		opacity: 0;
 	}
 }
