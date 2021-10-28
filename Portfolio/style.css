@@ -1,0 +1,413 @@
+@charset "UTF-8";
+/* CSS Document */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	scroll-behavior: smooth;
+}
+
+body{
+	background: #111;
+}
+
+section{
+	position: relative;
+	padding: 100px;
+}
+
+.header{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn{
+	from{
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to{
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.header .logo{
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.header .navigation{
+	position: relative;
+	display: flex;
+}
+
+.header .navigation li{
+	list-style: none;
+}
+
+.header .navigation li a{
+	display: inline-block;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1.25em;
+	text-decoration: none;
+	margin-left: 30px;
+	padding-right: 10px;
+	padding-top: 7px;
+	transition: 0.5s;
+}
+
+.header .navigation li a:hover{
+	opacity: 0.65;
+}
+
+/* ---------- Top Banner --------*/
+
+.banner{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background: linear-gradient(to top, #111, transparent);
+}
+
+.banner .content{
+	position: relative;
+	max-width: 900px;
+	text-align: center;
+	z-index: 1;
+}
+
+.banner .content h2{
+	color: #fff;
+	font-size: 5em;
+	animation: h2transitionIn 1s;
+}
+
+@keyframes h2transitionIn{
+	from{
+		margin-bottom: 100%;
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+
+.banner .content p{
+	color: #fff;
+	font-size: 1.2em;
+}
+
+.btn{
+	position: relative;
+	display: inline-block;
+	margin-top: 30px;
+	padding: 10px 30px;
+	background: #fff;
+	color: #333;
+	text-decoration: none;
+}
+
+.fitBg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+
+.fitBgClear{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ---------- About Section ---------- */
+.about{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.about .contentBox{
+	min-width: 50%;
+	width: 50%;
+	padding-left: 40px;
+}
+
+.titleText{
+	font-weight: 600;
+	color: #fff;
+	font-size: 3.5em;
+	margin-bottom: 10px;
+}
+
+.text{
+	color: #fff;
+	font-size: 1.25em;
+}
+
+.about .imgBx{
+	position: relative;
+	min-width: 50%;
+	width: 50%;
+	min-height: 500px;
+}
+
+/* ---------- Banner 2 ---------- */
+.banner2,
+.banner3{
+	position: relative;
+	widht: 100%;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner2:before,
+.banner3:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background: linear-gradient(to top, #111, transparent);
+}
+
+.banner2:after,
+.banner3:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	z-index: 1;
+	background: linear-gradient(to bottom, #111, transparent);
+}
+
+/* ---------- Compilation ---------- */
+.compilation{
+	text-align: center;
+}
+
+.compilation .cnt{
+	text-align: center;
+}
+
+.compilation .compilationList{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 40px;
+}
+
+.compilation .compilationList .box{
+	position: relative;
+	min-width: 350px;
+	height: 480px;
+	background: #191919;
+	transition: 0.5s;
+	margin: 10px;
+}
+
+.compilation .compilationList:hover .box{
+	opacity: 0.2;
+}
+
+.compilation .compilationList .box:hover{
+	opacity: 1;
+}
+
+.compilation .compilationList .box .imgBx{
+	position: relative;
+	width: 100%;
+	height: 400px;
+}
+
+.compilation .compilationList .box .content{
+	width: 100%;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.compilation .compilationList .box .content a{
+	color: #fff;
+	font-weight: 500;
+	line-height: 1.2em;
+	font-size: 2em;
+	text-decoration: none;
+}
+
+/* ---------- Footer --------- */
+.footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer .social{
+	position: relative;
+	display: flex;
+}
+
+.footer .social li{
+	list-style: none;
+}
+
+.footer .social li a{
+	text-decoration: none;
+	margin: 0 20px;
+}
+
+.footer .social li a img{
+	filter: invert(1);
+	max-width: 40px;
+}
+
+.footerText{
+	margin-top: 20px;
+	color: #ddd;
+	font-size: 18px;
+	font-weight: 300;
+	text-align: center;
+	
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 991px){
+	section{
+		padding: 40px;
+	}
+	
+	.banner .content h2{
+		font-size: 2.5em;
+	}
+	
+	.banner .content p{
+		font-size: 1em;
+	}
+	
+	.about{
+		flex-direction: column;
+	}
+	
+	.about .contentBox, .about .imgBx{
+		min-width: 100%;
+		width: 100%;
+		text-align: center;
+		padding-right: 0px;
+	}
+	
+	.about .imgBx{
+		min-height: 250px;
+	}
+	
+	.btn{
+		margin-top: 30px;
+	}
+	
+	.titleText{
+		margin-top: 30px;
+	}	
+	
+	.header{
+		padding-top: 40px;
+	}
+	
+	.header .navigation{
+		display: none;
+	}
+	
+	.header .navigation.active{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: #111;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		z-index: 10;
+		animation: mobileTransition 0.5s;
+	}
+	
+	@keyframes mobileTransition{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+	
+	.header .navigation li a{
+		margin: 10px;
+		font-size: 1.5em;
+		font-weight: 300;
+		padding-right: 30px;
+	}
+	
+	.toggle{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background: url("toggle.png");
+		background-size: 30px;
+		background-repeat: no-repeat;
+		background-position: center;
+		cursor: pointer;
+		z-index: 10000;
+		padding-right: 75px;
+	}
+	.toggle.active{
+		position: fixed;
+		right: 40px;
+		background: url(close.png);
+		background-size: 25px;
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+}

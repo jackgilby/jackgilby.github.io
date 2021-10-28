@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Home</title>
+</head>
+	
+<body>
+	<section class="header">
+		<a href="#" class="logo"><h2>GILBY.</h2></a>
+		<div class="toggle" onclick="toggleMenu()"></div>
+			<ul class="navigation">
+				<li><a href="s#">Design</a></li>
+				<li><a href="#">UI/UX</a></li>
+				<li><a href="#">Illustration</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+	</section>
+	
+	<section class="banner">
+		<img src="art/art_tower.jpg" class="fitBg">
+		<div class="content">
+			<h2>GILBY DESIGNS</h2>
+			<p><br>Specializing in UI/UX Design.</p>
+		</div>
+	</section>
+	
+	<section class="compilation">
+		<div class="cnt">
+			<h2 class="titleText">Multifaceted</h2>
+			<p class="text"><br>Specializing in design, illustration and UI. Experienced in projects such as product redesign, event promotion branding, and website design.</p>
+		</div>
+		<div class="compilationList">
+			<div class="box">
+				<div class="imgBx">
+					<img src="art/art_gameboy.png" class="fitBgClear">
+				</div>
+				<div class="content">
+					<a href="#">Design</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="art/art_walkway.png" class="fitBgClear">
+				</div>
+				<div class="content">
+					<a href="#">Illustration</a>
+				</div>
+			</div>
+			<div class="box">
+				<div class="imgBx">
+					<img src="art/art_rocks.jpg"class="fitBgClear">
+				</div>
+				<div class="content">
+					<a href="#">UI</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="banner2">
+		<img src="art/art_redtree.jpg" class="fitBgClear">
+	</section>
+	
+	<section>
+		<div class="about">
+			
+			<div class="imgBx">
+				<img src="art/art_redtree.jpg" class="fitBgClear">
+			</div>
+			<div class="contentBox">
+				<h2 class="titleText">About Gilby.</h2>
+				<p class="text">This website was created and curates projects made by Jack Gilbert, a Interactive Media Design major minoring in Computer Sciences. <br><br>Focuses in User Interface and User Experience Design with experience in illustration, product design and branding design<br><br>Based out of the Minneapolis and Dunn County area. Open to freelance or professional work in any of those fields, either remotely or in person. </p>
+				<a href="#" class="btn">Contact</a>
+			</div>
+			
+		</div>
+	</section>
+	
+	<section class="banner3">
+		<img src="art/art_bluetree.jpg" class="fitBgClear">
+	</section>
+	
+	<section class="footer">
+		<ul class="social">
+			<li><a href="#"><img src="social/twitter.png"></a></li>
+			<li><a href="#"><img src="social/instagram.png"></a></li>
+			<li><a href="#"><img src="social/linkedin.png"></a></li>
+		</ul>
+		<h4 class="footerText">Created 2021, Updated 2021. All images are my own.</h4>
+	</section>
+	<script>
+	function toggleMenu(){
+		const menuToggle = document.querySelector('.toggle');
+		const navigation = document.querySelector('.navigation');
+		menuToggle.classList.toggle('active')
+		navigation.classList.toggle('active')
+	}
+	</script>
+</body>
+</html>
